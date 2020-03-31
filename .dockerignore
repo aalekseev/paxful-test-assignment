@@ -1,0 +1,11 @@
+.idea
+.data*/
+
+__pycache__/
+*.pyo
+*.pyc
+
+.cache/
+.pytest_cache/
+.coverage/
+coverage/
