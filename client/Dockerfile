@@ -1,6 +1,6 @@
 FROM node:12-alpine
 
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash python make
 
 COPY package.json yarn.lock /app/
 
