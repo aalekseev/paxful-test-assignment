@@ -57,6 +57,7 @@ The project is built with these tools
 - Django as backend
 - PostgreSQL as database
 - ReactJS as client
+- Create-react-app to bootstrap the client application
 - SASS as styles preprocessor
 
 ## Project Structure
@@ -103,6 +104,9 @@ for Django (because sometimes Django boots faster than the database).
 1. **In the real-life situation we would use Redux** for managing application
     state, but in this small assignment it was easy to use Composition
     instead of Redux or drilling props
+1. **In the real-life situation we would use Props Types**
+    for validation, but in the scope of this project this was
+    left for future improvements
 1. **In the real-life situation we would use [Django Rest Framework](https://www.django-rest-framework.org/)**
     for API routing and serialization, but since the goal of the assignment
     was to implement only one route with a simple response, Django built-in
