@@ -16,7 +16,6 @@ services:
       - NODE_ENV=development
     stdin_open: true
     volumes:
-      - ".data/node_modules:/app/node_modules"
       - "./client/src:/app/src"
       - "./client/public:/app/public"
     ports:
