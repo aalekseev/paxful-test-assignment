@@ -21,12 +21,11 @@ class Trade(models.Model):
     )
     hash = models.UUIDField(default=uuid4, editable=False, unique=True)
     title = models.CharField(max_length=255)
-    seller = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sell_trades')
-    buyer = models.ForeignKey(User, on_delete=models.CASCADE, related_name='buy_trades')
+    seller = models.ForeignKey(User, on_delete=models.PROTECT, related_name='sell_trades')
+    buyer = models.ForeignKey(User, on_delete=models.PROTECT, related_name='buy_trades')
     status = models.CharField(max_length=10, choices=STATUSES, default=STATUS_NOT_PAID)
     amount_usd = models.DecimalField(max_digits=8, decimal_places=2)
     amount_satoshi = models.IntegerField(default=0)
-    completed = models.BooleanField(default=False)
 
     @property
     def amount_btc(self):
@@ -49,5 +48,4 @@ class Trade(models.Model):
             'amount_usd': self.amount_usd,
             'amount_btc': self.amount_btc,
             'status': self.status,
-            'paid': self.completed,
         }
