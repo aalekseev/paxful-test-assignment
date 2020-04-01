@@ -6,6 +6,12 @@
   align-items: center;
   border-bottom: $border-bold solid $grey;
   padding: $gap;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $lightblue;
+    transition: all .2s ease-in-out;
+  }
 }
 
 .trade-card-wrapper{
