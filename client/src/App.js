@@ -1,22 +1,11 @@
 import React, {Fragment} from 'react';
 
-import {useTrades} from "./hooks";
-
 import {TopNav, TopNavLink} from "./ui/TopNav";
 import {PageNav, PageNavLink} from "./ui/PageNav";
 
 import TradesPage from "./pages/TradesPage";
 
 function App() {
-  const {loading, error, trades} = useTrades();
-
-  if (error) {
-    return (<p>{error.message}</p>)
-  }
-  if (loading) {
-    return (<p>Loading...</p>);
-  }
-
   return (
     <Fragment>
       <TopNav>
@@ -35,7 +24,7 @@ function App() {
         <PageNavLink title="Trade History" />
       </PageNav>
       <div className="container">
-        <TradesPage trades={trades} />
+        <TradesPage />
       </div>
     </Fragment>
   );

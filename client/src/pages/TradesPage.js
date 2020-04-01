@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 
 import avatar from "../static/avatar.jpg";
 
@@ -11,8 +11,35 @@ import Message from "../ui/Chat/Message";
 import MessageInput from "../ui/Chat/MessageInput";
 import StatsGrid from "../ui/Stats/StatsGrid";
 
-const TradesPage = ({trades}) => {
-  const [currentTrade, setCurrentTrade] = useState(trades[1]);
+const TradesPage = () => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [trades, setTrades] = useState([]);
+  const [currentTrade, setCurrentTrade] = useState({});
+
+  const fetchTrades = () => {
+    fetch('http://localhost:8000/api/data', {credentials: 'same-origin'})
+      .then(res => res.json())
+      .then(data => {
+        setTrades(data.trades);
+        setCurrentTrade(data.trades[1]);
+      })
+      .catch(err => {
+        setError(err);
+      })
+      .finally(() => setLoading(false));
+  };
+
+  useEffect(fetchTrades, []);
+
+  if (error) {
+    return (<p>{error.message}</p>)
+  }
+
+  if (loading) {
+    return (<p>Loading...</p>);
+  }
+
   const messages = [
     {
       messageType: 'question',
@@ -32,6 +59,7 @@ const TradesPage = ({trades}) => {
       time: '14:00pm'
     },
 ];
+
   return (
     <Fragment>
       <TradeList>
