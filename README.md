@@ -36,7 +36,7 @@ run the same commands but with shorter keystrokes.
 > Use `make help` to see all available commands
 
 1. `make setup` will build Docker containers and apply database migrations
-1. `make` will run start the containers
+1. `make` will start the containers
 1. Visit http://127.0.0.1:3000 to see the resulting page
 
 ### Without Makefile

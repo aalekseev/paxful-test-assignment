@@ -14,4 +14,4 @@ build:
 migrate:
 	docker-compose run --rm django python run.py migrate
 
-setup: build migrate run
+setup: build migrate
