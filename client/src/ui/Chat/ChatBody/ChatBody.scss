@@ -1,0 +1,9 @@
+@import "../../../styles/variables";
+
+main {
+  background: $lightblue;
+  padding: $gap;
+  min-width: 50%;
+  background: linear-gradient(90deg, $mediumblue 0%, $lightblue 2%, $lightblue 98%, $mediumblue 100%);
+  flex: 2;
+}

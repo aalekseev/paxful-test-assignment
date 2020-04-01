@@ -68,13 +68,11 @@ The project is built with these tools
 │   ├── package.json
 │   ├── public/
 │   └── src
-│       ├── chat/
-│       ├── misc/
-│       ├── navigation/
+│       ├── pages/
 │       ├── static/
-│       ├── stats/
 │       ├── styles/
 │       ├── trades/
+│       ├── ui/
 │       ├── index.js
 │       ├── index.scss
 │       └── App.js
@@ -95,6 +93,9 @@ The project is built with these tools
 
 Project is separated to `client` and `server` applications, that has their
 own containers configuration and dependencies.
+
+UI components in client folder are stateless components that are responsible
+only for representation of the content.
 
 `wait-for-it.sh` script is used to wait for Postgres container to be available
 for Django (because sometimes Django boots faster than the database).

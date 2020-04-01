@@ -1,0 +1,27 @@
+@import "../../../styles/variables";
+
+.stats .block {
+  text-align: center;
+  width: 49%;
+  border-bottom: $border-bold solid $lightgrey;
+
+  .trade-status {
+    margin: 1rem 0;
+  }
+}
+
+.block:nth-child(odd) {
+  border-right: $border-light solid $lightgrey;
+}
+
+.block:nth-child(even) {
+  border-left: $border-light solid $lightgrey;
+}
+
+.block h4 {
+  white-space: nowrap;
+}
+
+.block p:first-child {
+  font-weight: $weight-bold;
+}

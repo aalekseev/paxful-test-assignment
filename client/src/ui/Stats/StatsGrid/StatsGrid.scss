@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+
+.right-sidebar {
+  border-left: $border-bold solid $lightgrey;
+  flex: 1;
+  padding: $gap;
+}
+
+.stats-header {
+  text-align: center;
+
+  & p:first-child {
+    color: $main-font-color;
+    font-size: $font-size-medium;
+  }
+
+  p { margin-bottom: 0; }
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,15 @@
+@import "../../../styles/variables";
+
+.trade-status {
+  text-align: center;
+  color: $secondary-font-color;
+  font-weight: $weight-bold;
+  margin: 0;
+  white-space: nowrap;
+  font-size: $font-extra-small;
+
+  &.paid {
+    color: $darkgreen;
+    font-size: $font-size-normal;
+  }
+}

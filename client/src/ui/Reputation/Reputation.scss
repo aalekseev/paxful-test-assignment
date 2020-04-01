@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.reputation {
+
+  .positive {
+    color: $darkgreen;
+    padding-right: $gap / 4;
+    font-weight: $weight-bold;
+  }
+  .negative {
+    color: $red;
+    padding-left: $gap / 4;
+    font-weight: $weight-bold;
+  }
+}
