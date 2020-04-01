@@ -1,0 +1,32 @@
+@import "../styles/variables";
+
+.page-nav {
+  border-bottom: $border-light solid $lightgrey;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  padding: 0 ($gap * 4);
+  background-color: $white;
+  position: relative;
+  z-index: 1;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+
+    li {
+      border: $border-light solid $lightgrey;
+      padding: $gap ($gap * 2);
+
+      &.active {
+        background-color: $lightblue;
+      }
+
+      a {
+        color: $main-font-color;
+        text-decoration: none;
+        font-weight: $weight-bold;
+      }
+    }
+  }
+}

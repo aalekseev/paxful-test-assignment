@@ -1,0 +1,6 @@
+@import "../styles/variables";
+
+.left-sidebar {
+    border-right: $border-bold solid $lightgrey;
+    flex: 1;
+};

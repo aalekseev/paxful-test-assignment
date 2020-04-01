@@ -1,0 +1,35 @@
+@import "../styles/variables";
+
+.message-input {
+  border: $border-bold solid $grey;
+  border-radius: 2px;
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: ($gap / 4);
+  width: 50%;
+
+  p {
+    margin: 0;
+    padding: 0 ($gap / 2) 0 ($gap * 2);
+    font-weight: $weight-bold;
+    color: $main-font-color;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: $darkgreen;
+    font-weight: $weight-bold;
+    padding: $gap;
+    cursor: pointer;
+
+    &:hover {
+      color: $white;
+      background-color: $darkgreen;
+      transition: all .2s ease-in-out;
+    }
+  }
+}

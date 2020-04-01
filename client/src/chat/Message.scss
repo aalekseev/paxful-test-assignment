@@ -1,0 +1,58 @@
+@import "../styles/variables";
+
+.message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div:first-child {width: 10%;}
+  .avatar {width: 10%;}
+  .message-content {width: 80%;}
+
+  p {
+    padding: ($gap / 2);
+    margin: 0;
+    border: $border-bold solid $grey;
+    background-color: $white;
+    border-radius: 4px;
+  }
+
+  small {
+    font-size: $font-extra-small;
+  }
+
+  .avatar {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.message.reply {
+  flex-flow: row-reverse;
+
+  p {
+    color: $mediumblue;
+    background-color: $blue;
+  }
+}
+
+.timestamp {
+  display: flex;
+  margin: ($gap / 4) 0 $gap 0;
+  color: $secondary-font-color;
+
+  small {
+    flex: 8;
+    text-align: end;
+  }
+  span {
+    flex: 1
+  }
+}
+
+.timestamp.reply {
+  small {
+    text-align: left;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../styles/variables";
+
+.right-sidebar {
+  border-left: $border-bold solid $lightgrey;
+  flex: 1;
+  padding: $gap;
+}
+
+.stats-header {
+  text-align: center;
+
+  & p:first-child {
+    color: $main-font-color;
+    font-size: $font-size-medium;
+  }
+
+  p { margin-bottom: 0; }
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+
+  & .block {
+    text-align: center;
+    width: 49%;
+    border-bottom: $border-bold solid $lightgrey;
+
+    .trade-status {
+      margin: 1rem 0;
+    }
+  }
+}
+
+.block:nth-child(odd) {
+  border-right: $border-light solid $lightgrey;
+}
+
+.block:nth-child(even) {
+  border-left: $border-light solid $lightgrey;
+}
+
+.block h4 {
+  white-space: nowrap;
+}
+
+.block p:first-child {
+  font-weight: $weight-bold;
+}

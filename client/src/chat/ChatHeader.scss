@@ -1,0 +1,33 @@
+@import "../styles/variables";
+
+.remove-btn {
+  background-color: $mediumgrey;
+  border: none;
+  border-radius: 50%;
+  width: ($gap * 2);
+  height: ($gap * 2);
+  position: absolute;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  img {height: 18px;}
+
+  &:hover {
+    background-color: $main-font-color;
+    transition: all .2s ease-in-out;
+  }
+}
+
+.chat-header {
+  border-bottom: $border-bold solid $grey;
+  margin: $gap auto ($gap * 3) auto;
+
+  h2, p {
+    text-align: center;
+  }
+
+  p {
+    font-size: $font-size-medium;
+    margin-top: 0;
+  }
+}

@@ -1,12 +1,6 @@
 from django.http import JsonResponse
+from paxful.models import Trade
 
 
 def rates_view(request):
-    return JsonResponse({
-        'rates': [
-            [37, -109.05],
-            [41, -109.03],
-            [41, -102.05],
-            [37, -102.04]
-        ],
-    })
+    return JsonResponse({'trades': tuple([t.as_dict() for t in Trade.objects.all()])})
