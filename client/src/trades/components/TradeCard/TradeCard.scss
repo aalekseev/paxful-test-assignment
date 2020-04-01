@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: $border-bold solid $grey;
+  border-top: $border-light solid $grey;
+  border-bottom: $border-light solid $grey;
   padding: $gap;
   cursor: pointer;
 
@@ -54,16 +55,18 @@
 
 .selected {
   background-color: $lightblue;
-  border: $border-bold solid $mediumgrey;
+  border: $border-light solid $mediumgrey;
   border-left: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   margin-right: -$gap;
   position: relative;
   z-index: 1;
+  transition: all .2s ease-in-out;
 
   .trade-card-wrapper {
-    padding-left: $gap;
+    transform: translateX($gap);
+    transition: transform .2s ease-in-out;
   }
 
   .info p:first-child {
